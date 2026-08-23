@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 아침 뉴스 브리핑</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+</style>
+</head>
+<body>
+<h1>📰 아침 뉴스 브리핑</h1>
+<div class="ts">생성: 2026-08-24 07:30</div>
+<h2 class="">📰 욱님 아침 뉴스 브리핑</h2>
+<div class="line">🕖 2026-08-24 (Mon) 07:30</div>
+<div class="line down">오늘 시장: 악재 우세 (5:1)</div>
+<div class="gap"></div>
+<h2 class="">💬 CIO 오늘의 시장 판단</h2>
+<div class="line down">오늘 분위기: 위험선호(리스크온) 우위</div>
+<div class="line">(호재신호 5 vs 악재신호 1)</div>
+<div class="line up">→ 긍정적 재료 우세. 주도 섹터 중심 대응 유효한 환경.</div>
+<div class="detail concl">📌 오늘의 화두: 환율/금리, 미국증시, 반도체</div>
+<div class="gap"></div>
+<div class="detail">🔰 쉽게: 오늘 뉴스는 좋은 소식이 많아요. 시장 분위기가 밝은 편이라, 강한 섹터를 눈여겨볼 만해요.</div>
+<div class="gap"></div>
+<h2 class="">🎯 오늘 이렇게 대응</h2>
+<div class="detail down">· 악재 우세 → 리스크오프</div>
+<div class="detail">· 현금 40%+ (방어)</div>
+<div class="detail">· 신규 자제, 보유 손절선 점검</div>
+<div class="gap"></div>
+<div class="detail concl">📌 원칙: 거래대금·5분봉 확인 후 진입 / 손익비 1:3 미달 패스 / 급등추격 금지</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<div class="line">📑 뉴스 분석 (종목·섹터별)</div>
+<div class="gap"></div>
+<h2 class="down">🔴악재 [미국증시·환율·금리]</h2>
+<div class="detail">· [증시전략] 뉴욕증시, 美국채금리 급등에도 상승…잭슨홀·PCE 대기</div>
+<div class="detail down concl">💡 전문가 해석: 부정 재료. 해당 섹터 약세 가능, 신규 진입 신중히</div>
+<div class="detail down">🔰 쉽게 말하면 → 나쁜 소식이라 해당 업종이 약세를 보일 수 있어요. 오늘은 이 섹터에 새로 들어가는 건 신중하게 접근하세요.</div>
+<div class="gap"></div>
+<div class="line">⚪중립 [환율·금리·지정학]</div>
+<div class="detail">· 증시 오늘 '핫이슈' "베센트의 '이란 경제고립 작전', 중국 털어 미 국채...</div>
+<div class="detail down concl">💡 전문가 해석: 지정학 리스크 완화=위험자산 선호↑. 단 이미 반영됐을 수 있어 추격 주의</div>
+<div class="detail down">🔰 쉽게 말하면 → 중동 같은 곳의 긴장이 풀리면 투자자들이 금·달러 같은 안전자산 대신 주식 같은 위험자산을 다시 사들이는 경향이 있어요. 다만 뉴스가 이미 나온 뒤라 주가에 선반영됐을 수 있으니, 오늘 바로 따라 사기보단 잠깐 쉬어가는 눌림목을 기다리는 게 안전해요.</div>
+<div class="gap"></div>
+<div class="line">⚪중립 [반도체]</div>
+<div class="detail">· [더벨][Company Watch] 삼성·SK, 반도체 호황 탓 늘어난 원재료비 '반기...</div>
+<div class="detail concl">💡 전문가 해석: 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감</div>
+<div class="detail">🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.</div>
+<div class="gap"></div>
+<h2 class="down">🔴악재 [환율·금리]</h2>
+<div class="detail">· "백투백 인상"vs"속도조절"…엇갈리는 기준금리 전망</div>
+<div class="detail down concl">💡 전문가 해석: 부정 재료. 해당 섹터 약세 가능, 신규 진입 신중히</div>
+<div class="detail down">🔰 쉽게 말하면 → 나쁜 소식이라 해당 업종이 약세를 보일 수 있어요. 오늘은 이 섹터에 새로 들어가는 건 신중하게 접근하세요.</div>
+<div class="gap"></div>
+<h2 class="down">🔴악재 [환율·금리]</h2>
+<div class="detail">· 美연준 매파 카시카리 "국채시장 정상 작동 … 금리 상승에도 문제없어...</div>
+<div class="detail down concl">💡 전문가 해석: 금리 오르면 밸류 부담·자금이탈. 방어적으로</div>
+<div class="detail">🔰 쉽게 말하면 → 금리가 오르면 대출이자 부담이 커지고, 미래 이익을 당겨서 평가하는 성장주는 상대적으로 비싸 보이게 돼요(밸류에이션 부담). 이런 날은 공격적인 매수보다 방어적으로 접근하는 게 나아요.</div>
+<div class="gap"></div>
+<h2 class="down">🔴악재 [시장전반]</h2>
+<div class="detail down">· [마감 증시] 코스피, 外人 3.5조 '매도 폭탄'에 5.8% 급락…6,470선 후퇴·...</div>
+<div class="detail concl">💡 전문가 해석: 지수 방향은 개별종목 배경. 지수 좋을 때 종목도 잘 감</div>
+<div class="detail">🔰 쉽게 말하면 → 지수(코스피)는 시장 전체의 체온계예요. 지수가 오르는 날은 대부분 종목도 같이 오를 확률이 높으니, 오늘 지수 분위기부터 확인하고 개별 종목을 보세요.</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [시장전반]</h2>
+<div class="detail up">· 빠져도 스트레이키즈, 반등도 스트레이키즈…JYP, 세대교체 시험대</div>
+<div class="detail concl">💡 전문가 해석: 긍정 재료. 관련 섹터에 자금 들어오는지 거래대금 확인</div>
+<div class="detail">🔰 쉽게 말하면 → 좋은 소식이지만, 뉴스만 보고 사기보다 실제로 그 업종에 돈(거래대금)이 들어오고 있는지 확인한 뒤 판단하세요.</div>
+<div class="gap"></div>
+<div class="line">※ 뉴스는 참고용. 최종 판단은 본인 원칙대로.</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
