@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 아침 뉴스 브리핑</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+</style>
+</head>
+<body>
+<h1>📰 아침 뉴스 브리핑</h1>
+<div class="ts">생성: 2026-08-26 07:30</div>
+<h2 class="">📰 욱님 아침 뉴스 브리핑</h2>
+<div class="line">🕖 2026-08-26 (Wed) 07:30</div>
+<div class="line down">오늘 시장: 악재 우세 (2:1)</div>
+<div class="gap"></div>
+<h2 class="">💬 CIO 오늘의 시장 판단</h2>
+<div class="line down">오늘 분위기: 위험선호(리스크온) 우위</div>
+<div class="line">(호재신호 6 vs 악재신호 2)</div>
+<div class="line up">→ 긍정적 재료 우세. 주도 섹터 중심 대응 유효한 환경.</div>
+<div class="detail concl">📌 오늘의 화두: 미국증시, 반도체, 환율/금리</div>
+<div class="gap"></div>
+<div class="detail">🔰 쉽게: 오늘 뉴스는 좋은 소식이 많아요. 시장 분위기가 밝은 편이라, 강한 섹터를 눈여겨볼 만해요.</div>
+<div class="gap"></div>
+<h2 class="">🎯 오늘 이렇게 대응</h2>
+<div class="detail">· 혼조 → 선별 장세</div>
+<div class="detail">· 현금 30~40%</div>
+<div class="detail">· 거래대금 살아있는 것만</div>
+<div class="gap"></div>
+<div class="detail concl">📌 원칙: 거래대금·5분봉 확인 후 진입 / 손익비 1:3 미달 패스 / 급등추격 금지</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<div class="line">📑 뉴스 분석 (종목·섹터별)</div>
+<div class="gap"></div>
+<div class="line">⚪중립 [미국증시]</div>
+<div class="detail">· [증시전략] 엔비디아, 내일 실적 발표 대기…매출 약 두 배↑ 전망</div>
+<div class="detail concl">💡 전문가 해석: 실적 발표는 선반영 많음. 발표 후 주가 반응을 봐야</div>
+<div class="detail">🔰 쉽게 말하면 → 실적이 잘 나와도 이미 기대감이 주가에 반영돼 있으면 '재료 소멸'로 오히려 빠지기도 해요. 실적 발표 자체보다 발표 '이후' 주가가 실제로 어떻게 반응하는지를 보고 판단하세요.</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [반도체]</h2>
+<div class="detail up">· [마켓 프리뷰] 반도체 살아나며 코스피 상승 전환…코스닥 1%대 강세</div>
+<div class="detail concl">💡 전문가 해석: 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감</div>
+<div class="detail">🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.</div>
+<div class="gap"></div>
+<div class="line">⚪중립 [반도체·미국증시]</div>
+<div class="detail up">· 뉴욕증시, 반도체주 투심 회복에 일제히 상승…나스닥 0.66%↑</div>
+<div class="detail up concl">💡 전문가 해석: 미국 강세면 다음날 한국 갭상승 가능. 시초가 추격 말고 흐름 봐</div>
+<div class="detail">🔰 쉽게 말하면 → 미국 증시가 밤사이 많이 오르면 다음날 한국 증시도 시작부터 높게 출발(갭상승)하는 경우가 많아요. 다만 시가부터 따라 사면 비싸게 사는 셈이라, 장 초반 흐름을 좀 지켜본 뒤 들어가는 게 안전해요.</div>
+<div class="gap"></div>
+<div class="line">⚪중립 [미국증시]</div>
+<div class="detail">· [오늘의 이슈]엔비디아·PCE·출생통계, 오늘의 숫자 3題</div>
+<div class="detail concl">💡 전문가 해석: 방향성 애매. 시장이 어느 쪽으로 쏠리는지 지켜봐</div>
+<div class="detail">🔰 쉽게 말하면 → 아직 좋다·나쁘다 판단이 애매한 소식이에요. 성급하게 움직이지 말고 시장이 어느 쪽으로 쏠리는지 조금 더 지켜보세요.</div>
+<div class="gap"></div>
+<div class="line">⚪중립 [시장전반]</div>
+<div class="detail">· 아서 헤이즈 "비트코인(BTC), 유동성 폭발 타고 더 뛴다"</div>
+<div class="detail concl">💡 전문가 해석: 방향성 애매. 시장이 어느 쪽으로 쏠리는지 지켜봐</div>
+<div class="detail">🔰 쉽게 말하면 → 아직 좋다·나쁘다 판단이 애매한 소식이에요. 성급하게 움직이지 말고 시장이 어느 쪽으로 쏠리는지 조금 더 지켜보세요.</div>
+<div class="gap"></div>
+<h2 class="down">🔴악재 [시장전반]</h2>
+<div class="detail down">· [마감 증시] 코스피, 外人 3.5조 '매도 폭탄'에 5.8% 급락…6,470선 후퇴·...</div>
+<div class="detail concl">💡 전문가 해석: 지수 방향은 개별종목 배경. 지수 좋을 때 종목도 잘 감</div>
+<div class="detail">🔰 쉽게 말하면 → 지수(코스피)는 시장 전체의 체온계예요. 지수가 오르는 날은 대부분 종목도 같이 오를 확률이 높으니, 오늘 지수 분위기부터 확인하고 개별 종목을 보세요.</div>
+<div class="gap"></div>
+<div class="line">※ 뉴스는 참고용. 최종 판단은 본인 원칙대로.</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
