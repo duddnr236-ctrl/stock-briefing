@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 아침 뉴스 브리핑</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  /* 2026-08-28 추가: ①~⑩ 소제목("① 미국 증시" 등) */
+  .subhead { font-weight:700; margin:14px 0 4px; padding:4px 2px;
+    color:#a8c7ff; border-bottom:1px solid #2a2e38; }
+  /* 2026-08-31 추가: [테마명] 소제목 — h2(브리핑 대제목)보다 한 단계
+     낮은 밝은 초록 계열로, "지금부터 이 테마 얘기"를 표시 */
+  .theme { font-weight:700; font-size:14.5px; margin:16px 0 6px;
+    padding:5px 10px; color:#7ee787; border-left:3px solid #2ea043;
+    background:#132118; border-radius:4px; display:inline-block; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  /* ── 2026-08-31 추가: 중립/판단보류 (노랑 계열) ──
+     up(빨강)/down(파랑)과 성격이 다른 정보라는 걸 색으로도 구분.
+     경고(.warn)보다는 채도를 낮춰서 "위험 경고"와 헷갈리지 않게 함. */
+  .neutral { color:#e3c04a; font-weight:600; }
+  .stock.neutral { background:#231d10; border-left:3px solid #e3c04a; }
+  .theme.neutral { color:#e3c04a; border-left-color:#e3c04a; background:#231d10; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+  .concl.neutral { border-left-color:#e3c04a; }
+</style>
+</head>
+<body>
+<h1>📰 아침 뉴스 브리핑</h1>
+<div class="ts">생성: 2026-09-01 07:30</div>
+<h2 class="">📰 욱님 아침 뉴스 브리핑</h2>
+<div class="line">🕖 2026-09-01 (Tue) 07:30</div>
+<div class="gap"></div>
+<div class="detail concl">📌 오늘의 결론</div>
+<div class="line up">오늘 시장: 호재 우세 (7:1)</div>
+<div class="gap"></div>
+<h2 class="">💬 CIO 오늘의 시장 판단</h2>
+<div class="line down">오늘 분위기: 위험선호(리스크온) 우위</div>
+<div class="line">(호재신호 8 vs 악재신호 4)</div>
+<div class="line up">→ 긍정적 재료 우세. 주도 섹터 중심 대응 유효한 환경.</div>
+<div class="detail concl">📌 오늘의 화두: 미국증시, 방산/조선, 환율/금리</div>
+<div class="gap"></div>
+<div class="detail">🔰 쉽게: 오늘 뉴스는 좋은 소식이 많아요. 시장 분위기가 밝은 편이라, 강한 섹터를 눈여겨볼 만해요.</div>
+<div class="gap"></div>
+<h2 class="">🎯 오늘 이렇게 대응</h2>
+<div class="detail up">· 호재 우세 → 리스크온</div>
+<div class="detail">· 현금 20~30% (공격 여지)</div>
+<div class="detail">· 검색기 A(20일선 눌림) 위주</div>
+<div class="gap"></div>
+<div class="detail concl">📌 원칙: 거래대금·3분봉 확인 후 진입 / 손익비 1:2 미달 패스 / 급등추격 금지</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🌍 오늘의 시장 흐름 (해외 → 국내)</h2>
+<div class="gap"></div>
+<div class="subhead">① 미국 증시</div>
+<div class="line neutral">⚪중립 뉴욕증시, 미·이란 충돌 재개에 일제히 하락…유가는 '껑충'</div>
+<div class="detail down concl">💡 지정학 리스크 완화=위험자산 선호↑. 단 이미 반영됐을 수 있어 추격 주의</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/629/0000529235?sid=101</div>
+<div class="gap"></div>
+<div class="subhead">② 핵심 해외 이슈</div>
+<div class="line neutral">⚪중립 트럼프 "美 경제 최대 20% 성장 가능…연준 금리 올려선 안 돼"</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/123/0002389340?sid=104</div>
+<div class="line neutral">⚪중립 엔비디아 이끌어 하이닉스와 마이크론 올라</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://www.koreareport.co.kr/news/articleView.html?idxno=52482</div>
+<div class="gap"></div>
+<div class="subhead">③ 주요 지표</div>
+<div class="detail">· 코스피: 6,912.4 ▲1.53%</div>
+<div class="detail">🔰 한국 대표기업 전체 주가를 합친 지수 (시장 전체 체온계)</div>
+<div class="line up">→ 시장 전체 강세: 개별종목 진입 시 순풍, 단 추격매수 금지 원칙은 그대로</div>
+<div class="detail">· 코스닥: 837.7 ▲1.30%</div>
+<div class="detail">🔰 중소형·성장주 중심 지수. 코스피보다 변동 크고 개인 비중 높음</div>
+<div class="line up">→ 시장 전체 강세: 개별종목 진입 시 순풍, 단 추격매수 금지 원칙은 그대로</div>
+<div class="detail">· 원/달러: 1,367.8원 ▼0.91%</div>
+<div class="detail">🔰 1달러 사는 데 드는 원화. 오르면 원화 약세, 내리면 원화 강세</div>
+<div class="line">→ 원화 강세 진행 중: 외국인 자금엔 우호적(환차익 기대), 수출주엔 다소 부담</div>
+<div class="detail">· 미국10년물: 4.76 ▲1.84%</div>
+<div class="detail">🔰 美 국채 10년 금리. 안전하게 돈 빌려주고 받는 기준 이자율</div>
+<div class="line down">→ 美 금리 급등: 성장주(아직 이익 적은 반도체·바이오 등) 밸류에이션 부담 커짐 — 신규 진입 신중</div>
+<div class="detail">· 공포지수(VIX): 14.92 ▲2.83%</div>
+<div class="detail">🔰 美 증시 '앞으로 얼마나 출렁일지' 예상치. 시장 불안 온도계</div>
+<div class="line">→ 15 이하 = 안정 구간: 시장은 느긋하지만 '너무 느긋함'도 과열 신호일 수 있음</div>
+<div class="gap"></div>
+<div class="subhead">④ 국내 영향</div>
+<div class="line up">오늘 뉴스 종합 분위기: 호재 우세 (7:1)</div>
+<div class="detail">🔰 쉽게 말하면 → 오늘 나온 뉴스 중에 좋은 소식·나쁜 소식이 몇 개씩인지 세어본 거예요. 좋은 소식이 많으면 오늘 시장이 위로 올라갈 힘이 세다는 뜻이에요.</div>
+<div class="gap"></div>
+<div class="subhead">⑤ 수혜·피해 섹터</div>
+<div class="line up">수혜(호재 우세): 전력에너지(1:0), 조선(1:0)</div>
+<div class="line down">피해(악재 우세): 없음</div>
+<div class="detail up">🔰 쉽게 말하면 → 오늘 뉴스에서 좋은 얘기가 많이 나온 업종이 '수혜', 나쁜 얘기가 많이 나온 업종이 '피해'예요. 수혜 업종부터 먼저 살펴보면 좋아요 (다만 자리·거래대금·돌파확인·손익비는 그대로 다 확인해야 해요).</div>
+<div class="gap"></div>
+<div class="subhead">⑥ 국내 관련 종목 (워치리스트 핵심종목 기준)</div>
+<div class="line">[전력에너지] 두산에너빌리티, HD현대일렉트릭</div>
+<div class="line">[조선] 한화오션, HD현대중공업</div>
+<div class="gap"></div>
+<div class="subhead">⑦ 오늘의 시장 변수</div>
+<div class="detail">🔰 쉽게 말하면 → 오늘·이번 주에 실적 발표가 예정된 종목이에요. 실적 발표 전후엔 주가가 크게 튈 수 있어서 미리 알아두면 좋아요.</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🇺🇸 미국 핵심주 실적 일정</h2>
+<div class="line">미국 실적은 다음날 한국 증시에 영향</div>
+<div class="gap"></div>
+<div class="line">향후 30일 내 3개 종목 실적 예정</div>
+<div class="gap"></div>
+<div class="stock">● 브로드컴 (AVGO) 🟠 D-2 임박</div>
+<div class="line">09/03 · 관련: AI인프라·PCB</div>
+<div class="detail concl">💡 AI 네트워크칩 → 이수페타시스 연관</div>
+<div class="gap"></div>
+<div class="stock">● 플래닛랩스 (PL) 🟠 D-3 임박</div>
+<div class="line">09/04 · 관련: 우주·위성</div>
+<div class="detail concl">💡 위성영상 → 위성주 밸류</div>
+<div class="gap"></div>
+<div class="stock">● 마이크론 (MU) D-30</div>
+<div class="line">10/01 · 관련: AI반도체·HBM</div>
+<div class="detail concl">💡 메모리 → SK하이닉스 직접 비교</div>
+<div class="gap"></div>
+<div class="detail">🔰 왜 미국 실적을 보나요?</div>
+<div class="line">엔비디아·마이크론 같은 미국 회사가 밤에</div>
+<div class="line">실적 발표하면, 다음날 아침 한국의 관련</div>
+<div class="line">종목들이 따라 움직여요.</div>
+<div class="line">→ D-1~3 종목은 그날 밤/다음날 주목!</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">📰 주식 관련 이슈</h2>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [지정학] ★★☆☆☆ [단기 재료]</h2>
+<div class="detail">· 미·이란 한달 만에 다시 교전…유가 급등에 美증시 하락-[글로벌 마감...</div>
+<div class="detail down concl">💡 지정학 리스크 완화=위험자산 선호↑. 단 이미 반영됐을 수 있어 추격 주의</div>
+<div class="detail">📅 며칠 안에 재료 효과가 식을 수 있는 이벤트성 재료예요. 단타 관점으로 접근하거나, 스윙이라도 거래대금이 갑자기 줄어드는 등 재료가 식는 기미가 보이면 목표가 전이라도 원칙대로 대응하세요.</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/215/0001264347?sid=101</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [시장전반] ★★☆☆☆ [단기 재료]</h2>
+<div class="detail up">· 8월 코스피 3.4% 반등했지만…외인 10조 팔고 거래대금 '반토막'</div>
+<div class="detail up concl">💡 외인 수급이 한국 증시 방향타. 순매수 지속이면 상승 힘</div>
+<div class="detail">📅 며칠 안에 재료 효과가 식을 수 있는 이벤트성 재료예요. 단타 관점으로 접근하거나, 스윙이라도 거래대금이 갑자기 줄어드는 등 재료가 식는 기미가 보이면 목표가 전이라도 원칙대로 대응하세요.</div>
+<div class="detail">🔗 기사보기: http://www.newsian.co.kr/news/articleView.html?idxno=94535</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [미국증시·지정학] ★☆☆☆☆ [단기 재료]</div>
+<div class="detail">· 뉴욕증시, 미·이란 충돌 재개에 일제히 하락…유가는 '껑충'</div>
+<div class="detail down concl">💡 지정학 리스크 완화=위험자산 선호↑. 단 이미 반영됐을 수 있어 추격 주의</div>
+<div class="detail">📅 며칠 안에 재료 효과가 식을 수 있는 이벤트성 재료예요. 단타 관점으로 접근하거나, 스윙이라도 거래대금이 갑자기 줄어드는 등 재료가 식는 기미가 보이면 목표가 전이라도 원칙대로 대응하세요.</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/629/0000529235?sid=101</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [반도체] ★★☆☆☆ [혼합 - 직접 확인]</h2>
+<div class="detail">· HBM 현물가 장기계약 대비 5배 급등…메모리 장기 수급 구조 재편</div>
+<div class="detail concl">💡 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감</div>
+<div class="detail">🔗 기사보기: https://www.g-enews.com/view.php?ud=202609010704459454fbbec65dfb_1</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [반도체·미국증시] ★☆☆☆☆ [판단보류]</div>
+<div class="detail">· 엔비디아 이끌어 하이닉스와 마이크론 올라</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://www.koreareport.co.kr/news/articleView.html?idxno=52482</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [환율·금리] ★☆☆☆☆ [단기 재료]</div>
+<div class="detail">· 트럼프 "美 경제 최대 20% 성장 가능…연준 금리 올려선 안 돼"</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">📅 며칠 안에 재료 효과가 식을 수 있는 이벤트성 재료예요. 단타 관점으로 접근하거나, 스윙이라도 거래대금이 갑자기 줄어드는 등 재료가 식는 기미가 보이면 목표가 전이라도 원칙대로 대응하세요.</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/123/0002389340?sid=104</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [시장전반] ★☆☆☆☆ [판단보류]</div>
+<div class="detail">· ‘개미 주도’ 코스닥에 外人·기관 몰려온다</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/016/0002688621?sid=101</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [지정학] ★☆☆☆☆ [단기 재료]</div>
+<div class="detail">· [美증시] 브로드컴 3분기 실적발표 앞두고 '긴장'…2분기 쇼크 반복이냐...</div>
+<div class="detail concl">💡 실적 발표는 선반영 많음. 발표 후 주가 반응을 봐야</div>
+<div class="detail">📅 며칠 안에 재료 효과가 식을 수 있는 이벤트성 재료예요. 단타 관점으로 접근하거나, 스윙이라도 거래대금이 갑자기 줄어드는 등 재료가 식는 기미가 보이면 목표가 전이라도 원칙대로 대응하세요.</div>
+<div class="detail">🔗 기사보기: https://www.mediapen.com/news/view/1120229</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🎯 테마별 동향</h2>
+<div class="gap"></div>
+<div class="theme">[로봇]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 동대문구, 초등학생 대상 'DDM 키즈 테크 ON' 운영</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://hbnpress.com/news/view/1065564789372269</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] [류재철의 로봇 전략] 청소로봇서 휴머노이드까지…40년 기술 축적, 수익...</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://dealsite.co.kr/articles/168067</div>
+<div class="gap"></div>
+<div class="theme">[전력에너지]</div>
+<div class="line up">⚪중립 ★☆☆☆☆ [판단보류] [정태철 칼럼] "화석연료 긍정적 혜택 더 많다"...에너지 철학자의 도발...</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: http://www.civicnews.com/news/articleView.html?idxno=40381</div>
+<div class="line up">🟢🟢강한호재 ★★★☆☆ [장기 재료] HD현대일렉트릭, 송전망 이어 데이터센터 수주 확대…빌 게이츠 방한에...</div>
+<div class="detail up concl">💡 실적 개선 직결 재료. 거래대금 터지는지 보고 진입 판단</div>
+<div class="detail up">📅 구조적인 재료라 스윙(며칠~몇 주) 관점으로 볼 수 있어요. 다만 이 재료가 좋다고 4대 게이트(자리·거래대금·돌파확인·손익비)를 생략해도 되는 건 절대 아니에요 - 게이트는 항상 그대로 다 확인하세요.</div>
+<div class="detail">🔗 기사보기: https://www.cbci.co.kr/news/articleView.html?idxno=602397</div>
+<div class="gap"></div>
+<div class="theme">[방산]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 투자·조선·관광 '3대 엔진' 가동…경남도, 대도약 판 키운다</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://www.industrynews.co.kr/news/articleView.html?idxno=85284</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] [Who Is ?] 김민석 더불어민주당 대표</div>
+<div class="detail concl">💡 경영진 인사 뉴스로 보임 — 통상 단기 주가 영향은 제한적, 전략 방향 전환 신호로만 참고</div>
+<div class="detail">🔗 기사보기: https://www.businesspost.co.kr/BP?command=article_view&amp;num=445917</div>
+<div class="gap"></div>
+<div class="theme">[조선]</div>
+<div class="line up">🟢호재 ★★☆☆☆ [단기 재료] 조선업 판 커졌다…HD현대중공업 1위, HD한국조선해양·한화오션 급등</div>
+<div class="detail concl">💡 긍정 재료. 관련 섹터에 자금 들어오는지 거래대금 확인</div>
+<div class="detail">📅 며칠 안에 재료 효과가 식을 수 있는 이벤트성 재료예요. 단타 관점으로 접근하거나, 스윙이라도 거래대금이 갑자기 줄어드는 등 재료가 식는 기미가 보이면 목표가 전이라도 원칙대로 대응하세요.</div>
+<div class="detail">🔗 기사보기: https://www.pinpointnews.co.kr/news/articleView.html?idxno=482361</div>
+<div class="gap"></div>
+<div class="theme">[바이오소비]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [장기 재료] [MD제약바이오] 온코닉테라퓨틱스, 네수파립 美 특허 등록 결정 등</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail up">📅 구조적인 재료라 스윙(며칠~몇 주) 관점으로 볼 수 있어요. 다만 이 재료가 좋다고 4대 게이트(자리·거래대금·돌파확인·손익비)를 생략해도 되는 건 절대 아니에요 - 게이트는 항상 그대로 다 확인하세요.</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/117/0004100108?sid=102</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [장기 재료] [제약+] 삼성바이오로직스, 2.7조 폴리펩타이드 인수 절차 外</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail up">📅 구조적인 재료라 스윙(며칠~몇 주) 관점으로 볼 수 있어요. 다만 이 재료가 좋다고 4대 게이트(자리·거래대금·돌파확인·손익비)를 생략해도 되는 건 절대 아니에요 - 게이트는 항상 그대로 다 확인하세요.</div>
+<div class="detail">🔗 기사보기: https://news.dealsitetv.com/articles/175425</div>
+<div class="gap"></div>
+<div class="theme">[우주위성]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 태양계 밖 보이저까지 듣는다, 34m 심우주 안테나의 임무</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://www.mediafine.co.kr/news/articleView.html?idxno=88452</div>
+<div class="line down">⚪중립 ★☆☆☆☆ [판단보류] 월가, 엔비디아·델 '주목' vs 애플 '경계' [ 글로벌 IB리포트 ]</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/215/0001264348?sid=101</div>
+<div class="gap"></div>
+<div class="theme">[AI소프트웨어]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 중러 정상 상하이협력기구서 결속 과시, 미국 견제 다극화 위해 협력</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://www.newspim.com/news/view/20260901000027</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 2026 조선해양 국제 컨퍼런스 1일 오전 열려</div>
+<div class="detail concl">💡 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지·일정성 뉴스일 확률이 높음. 재료로 베팅하기보단 참고만 하고, 실제 매매 판단은 거래대금·차트로</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/003/0014160010?sid=102</div>
+<div class="gap"></div>
+<h2 class="">📖 쉬운 설명</h2>
+<div class="detail">· ★★★☆☆(재료강도) = 별이 많을수록 이 뉴스에 힘이 실렸다는 뜻(제목에 잡힌 호재/악재 단어 개수 기반 참고치 — 정밀 계산 아님)</div>
+<div class="detail neutral">· [장기 재료] = 몇 주~몇 달 갈 수 있는 재료 / [단기 재료] = 며칠 안에 식을 수 있는 재료 / [판단보류] = 이 도구가 확신 못함, 직접 확인 필요</div>
+<div class="detail up">· 🟢🟢강한호재 처럼 이모지가 겹치면 홑개(🟢호재)보다 신호가 더 강하다는 뜻</div>
+<div class="gap"></div>
+<div class="line">※ 뉴스는 참고용. 최종 판단은 본인 원칙대로.</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
