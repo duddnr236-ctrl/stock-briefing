@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📊 아침 브리핑</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  /* 2026-08-28 추가: ①~⑩ 소제목("① 미국 증시" 등) */
+  .subhead { font-weight:700; margin:14px 0 4px; padding:4px 2px;
+    color:#a8c7ff; border-bottom:1px solid #2a2e38; }
+  /* 2026-08-31 추가: [테마명] 소제목 — h2(브리핑 대제목)보다 한 단계
+     낮은 밝은 초록 계열로, "지금부터 이 테마 얘기"를 표시 */
+  .theme { font-weight:700; font-size:14.5px; margin:16px 0 6px;
+    padding:5px 10px; color:#7ee787; border-left:3px solid #2ea043;
+    background:#132118; border-radius:4px; display:inline-block; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  /* ── 2026-08-31 추가: 중립/판단보류 (노랑 계열) ──
+     up(빨강)/down(파랑)과 성격이 다른 정보라는 걸 색으로도 구분.
+     경고(.warn)보다는 채도를 낮춰서 "위험 경고"와 헷갈리지 않게 함. */
+  .neutral { color:#e3c04a; font-weight:600; }
+  .stock.neutral { background:#231d10; border-left:3px solid #e3c04a; }
+  .theme.neutral { color:#e3c04a; border-left-color:#e3c04a; background:#231d10; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+  .concl.neutral { border-left-color:#e3c04a; }
+</style>
+</head>
+<body>
+<h1>📊 아침 브리핑</h1>
+<div class="ts">생성: 2026-09-01 08:03</div>
+<h2 class="">📊 욱님 아침 브리핑</h2>
+<div class="line">🕗 2026-09-01 (Tue) 08:02</div>
+<div class="line">※ 시세·주도주=전일확정 / 뉴스=실시간</div>
+<div class="gap"></div>
+<h2 class="">⚡ 30초 요약</h2>
+<div class="detail">· 강한 신호는 없음. 상대적 우위: 에코프로(강도3), 현대모비스(강도3), KB금융(강도3)</div>
+<div class="detail">· 거래량 급증(세력유입?): LX세미콘(6.4배), 피엔티(5.4배), 루닛(5.2배)</div>
+<div class="gap"></div>
+<h2 class="">💬 CIO 총평</h2>
+<div class="line down">관심종목 평균 -0.4% 약세 (상승 32·하락 37)</div>
+<div class="line">→ 리스크오프. 현금비중 40%+로 방어.</div>
+<div class="line">→ 신규 진입 자제, 보유종목 손절선 점검.</div>
+<div class="gap"></div>
+<h2 class="warn">🚨 거래량 급증 14종목 = 세력 유입 가능</h2>
+<div class="line up">→ 거래대금 확인 후 「응축후돌파임박」(Role B) 자리인지 체크.</div>
+<div class="gap"></div>
+<div class="detail concl">📌 오늘도 원칙:</div>
+<div class="detail">· 신호 떠도 거래대금·5분봉 확인 후 진입</div>
+<div class="detail">· 진입 전 손절가 먼저, 손익비 최소 1:2(손절폭×2) 미달이면 패스</div>
+<div class="detail">· 1차목표 도달시 50%익절+본전이동, 잔량은 추적청산(목표 고정 아님)</div>
+<div class="detail up">· 급등 추격 금지, 눌림·돌파 확인 매수</div>
+<div class="gap"></div>
+<h2 class="">🌐 매크로 환경 (오늘 신호등의 상위 변수)</h2>
+<div class="detail">· 코스피: 6,912.4 ▲1.53%</div>
+<div class="detail">🔰 한국 대표기업 전체 주가를 합친 지수 (시장 전체 체온계)</div>
+<div class="line up">→ 시장 전체 강세: 개별종목 진입 시 순풍, 단 추격매수 금지 원칙은 그대로</div>
+<div class="detail">· 코스닥: 837.7 ▲1.30%</div>
+<div class="detail">🔰 중소형·성장주 중심 지수. 코스피보다 변동 크고 개인 비중 높음</div>
+<div class="line up">→ 시장 전체 강세: 개별종목 진입 시 순풍, 단 추격매수 금지 원칙은 그대로</div>
+<div class="detail">· 원/달러: 1,367.9원 ▼0.67%</div>
+<div class="detail">🔰 1달러 사는 데 드는 원화. 오르면 원화 약세, 내리면 원화 강세</div>
+<div class="line">→ 원화 강세 진행 중: 외국인 자금엔 우호적(환차익 기대), 수출주엔 다소 부담</div>
+<div class="detail">· 미국10년물: 4.76 ▲1.84%</div>
+<div class="detail">🔰 美 국채 10년 금리. 안전하게 돈 빌려주고 받는 기준 이자율</div>
+<div class="line down">→ 美 금리 급등: 성장주(아직 이익 적은 반도체·바이오 등) 밸류에이션 부담 커짐 — 신규 진입 신중</div>
+<div class="detail">· 공포지수(VIX): 14.92 ▲2.83%</div>
+<div class="detail">🔰 美 증시 '앞으로 얼마나 출렁일지' 예상치. 시장 불안 온도계</div>
+<div class="line">→ 15 이하 = 안정 구간: 시장은 느긋하지만 '너무 느긋함'도 과열 신호일 수 있음</div>
+<div class="gap"></div>
+<div class="line">🔍 오늘의 자리</div>
+<div class="line down">🔴 A·오늘 완성 (종가 매수 검토): 한미반도체, 에코프로, 에스에프에이, SK, HD현대일렉트릭, 엔켐</div>
+<div class="line">🔵 B·자리만 잡힘 (찜만, 사지 않음): 삼성전자, 리노공업, DB하이텍, LX세미콘, LG에너지솔루션, LG화학, NAVER, 크래프톤, 레인보우로보틱스, 한화에어로스페이스, 현대로템, 한화오션, HD현대중공업, 삼성중공업, 삼성바이오로직스, 셀트리온, 알테오젠, 휴젤, 현대차, 기아, 현대모비스, HL만도, POSCO홀딩스, KB금융, 신한지주, 하나금융지주, 우리금융지주, 하이브, 에스엠, 와이지엔터, LG생활건강, SK이노베이션, KT, 고려아연, 한국전력, 풍산, 펄어비스, 대주전자재료</div>
+<div class="gap"></div>
+<div class="line">※ A라도 그대로 사는 게 아니다. 종가(15:00~15:20)에 재확인:</div>
+<div class="line up">① 종가로 기준선 위 마감  ② 돌파일 거래량이 전일보다 많은가</div>
+<div class="line">③ 위꼬리 짧은가          ④ 손익비 최소 1:2 (손절폭×2=1차목표폭)</div>
+<div class="line">⑤ 손절폭 ≥ 당일 진폭의 절반 (좁으면 노이즈에 털린다)</div>
+<div class="line">※ 1차목표 도달시 50%익절+본전이동, 잔량은 목표없이 추적청산</div>
+<div class="line">※ B는 사는 게 아니다. 찜해두고 A로 바뀔 때까지 기다린다.</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="warn">🚨 거래량 급증 (세력 유입 가능성)</h2>
+<div class="line">평소보다 2배 이상 거래된 종목</div>
+<div class="gap"></div>
+<div class="stock">● LX세미콘 (반도체)</div>
+<div class="line">거래량 6.4배 · -1.6% · 52주 19%</div>
+<div class="stock">● 피엔티 (2차전지)</div>
+<div class="line">거래량 5.4배 · +1.3% · 52주 19%</div>
+<div class="stock">● 루닛 (바이오)</div>
+<div class="line">거래량 5.2배 · -1.5% · 52주 2%</div>
+<div class="stock">● 에스에프에이 (로봇)</div>
+<div class="line">거래량 4.0배 · +0.2% · 52주 42%</div>
+<div class="stock">● LG (지주)</div>
+<div class="line">거래량 3.4배 · +2.7% · 52주 36%</div>
+<div class="stock">● KB금융 (금융)</div>
+<div class="line">거래량 3.3배 · +1.0% · 52주 66%</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="up">🟢 진입검토 후보</h2>
+<div class="line up">차트 매수신호 강한 순</div>
+<div class="gap"></div>
+<div class="stock">● 에코프로 (2차전지)</div>
+<div class="line">91,300원 · 강도 3/5</div>
+<div class="detail up">📊 🟢 매수 우위(눌림목 검토) | MACD 상승모멘텀 강화 · 이평 골든크로스 초입</div>
+<div class="detail up">🔰 쉽게 말하면 → 매수 쪽 신호가 우세, 눌림목 노려볼 자리. (오르는 힘이 점점 세지는 중, 단기선이 중기선을 뚫고 올라오는 초입)</div>
+<div class="detail up">💬 CIO: 추세 전환 초입, 52주 25%로 중하단, 눌림목 구간 → 매수 신호 우세하나 확인 후 대응 권고</div>
+<div class="detail">📍 52주 위치 25% (0=바닥 100=천장)</div>
+<div class="line">📐 업종 상대강도: [2차전지] 10종목 중 7위 (+1.2%, 1위는 엘앤에프 +8.8%) · 거래대금 10종목 중 5위</div>
+<div class="detail">🔰 쉽게 말하면 → 같은 업종 종목들끼리 오늘 등락률로 줄을 세운 순위예요. 1등이 아니어도 괜찮아요 — 다만 업종 1등 종목과 왜 차이 나는지 궁금하면 같이 비교해서 보세요.</div>
+<div class="detail up concl">📌 결론: 🟢 매수 우위(눌림목 검토)</div>
+<div class="detail up">✅ [에코프로(086520)] 중대 리스크 없음 (참고용 지분변동 공시만 있음)</div>
+<div class="line">ℹ️ [에코프로(086520)] 지분변동·감사 관련 공시 1건 (대형주는 일상적, 참고용)</div>
+<div class="line">최근: 20260821 주식등의대량보유상황보고서(일반)</div>
+<div class="detail">🔰 쉽게 말하면 → 이 회사 주식을 5% 이상 가진 큰손(대주주·기관)의 지분이 바뀌었다는 신고예요. 대형주는 이런 신고가 원래 자주 올라와요 — 산 건지 판 건지는 원문을 열어야 알 수 있어요.</div>
+<div class="line">전체 보기: https://dart.fss.or.kr/dsab002/main.do (종목코드 086520로 검색)</div>
+<div class="line">🏭 주력: 에코프로비엠 지주회사(양극재 그룹)</div>
+<div class="line">영향력: 에코프로비엠 실적·주가에 연동, 개인 수급 쏠림이 큰 종목</div>
+<div class="line">🏢 에코프로 재무 (DART 기준)</div>
+<div class="line down">매출 성장 🔴나쁨 · -31.4% (컷:3년CAGR≥10%)</div>
+<div class="line">영업이익 🟡보통 · 6.3% (컷:영업이익률≥10%)</div>
+<div class="line down">ROE 🔴나쁨 · -2.4% (컷:≥15%)</div>
+<div class="line">부채 🟡보통 · 118% (컷:부채비율≤100%)</div>
+<div class="line down">PBR 🔴나쁨 · 6.27배 (컷:≤1배)</div>
+<div class="line down">→ 종합: 🔴나쁨 (매수 신중)</div>
+<div class="line">강점: 현금흐름 / 약점: 매출 성장, 순이익, ROE, PBR</div>
+<div class="gap"></div>
+<div class="stock">● 현대모비스 (자동차)</div>
+<div class="line">453,500원 · 강도 3/5 🔥거래량1.6배</div>
+<div class="detail up">📊 🟢 매수 우위(눌림목 검토) | RSI 약세권 · 스토캐스틱 과매도 골든크로스</div>
+<div class="detail up">🔰 쉽게 말하면 → 매수 쪽 신호가 우세, 눌림목 노려볼 자리. (아직 매수세가 약한 상태, 바닥에서 반등 신호가 막 켜진 상태)</div>
+<div class="detail up">💬 CIO: 역배열 조정 국면, 52주 18%로 저점권, 낙폭과대 반등 여지, 거래량 증가로 관심 확대 → 매수 신호 우세하나 확인 후 대응 권고</div>
+<div class="detail">📍 52주 위치 18% (0=바닥 100=천장)</div>
+<div class="line">📐 업종 상대강도: [자동차] 4종목 중 4위 (+0.7%, 1위는 HL만도 +3.0%) · 거래대금 4종목 중 2위</div>
+<div class="detail">🔰 쉽게 말하면 → 같은 업종 종목들끼리 오늘 등락률로 줄을 세운 순위예요. 1등이 아니어도 괜찮아요 — 다만 업종 1등 종목과 왜 차이 나는지 궁금하면 같이 비교해서 보세요.</div>
+<div class="detail up concl">📌 결론: 🟢 매수 우위(눌림목 검토)</div>
+<div class="detail up">✅ [현대모비스(012330)] 최근 14일 리스크 공시 없음</div>
+<div class="line">🏭 주력: 자동차 부품(모듈·AS부품)</div>
+<div class="line">영향력: 현대차·기아 생산량에 연동되는 핵심 부품 계열사</div>
+<div class="line">🏢 현대모비스 재무 (DART 기준)</div>
+<div class="line">매출 성장 🟡보통 · +1.6% (컷:3년CAGR≥10%)</div>
+<div class="line">영업이익 🟡보통 · 5.5% (컷:영업이익률≥10%)</div>
+<div class="line">ROE 🟡보통 · 7.4% (컷:≥15%)</div>
+<div class="line up">부채 🟢좋음 · 43% (컷:부채비율≤100%)</div>
+<div class="line">PER 🟡보통 · 11.1배 (컷:≤10배)</div>
+<div class="line up">PBR 🟢좋음 · 0.82배 (컷:≤1배)</div>
+<div class="line up">→ 종합: 🟢좋음 (매수 고려)</div>
+<div class="line">강점: 현금흐름, 부채, PBR</div>
+<div class="gap"></div>
+<div class="stock">● KB금융 (금융)</div>
+<div class="line">173,300원 · 강도 3/5 🔥거래량3.3배</div>
+<div class="detail up">📊 🟢 매수 우위(눌림목 검토) | MACD 상승모멘텀 강화 · 이평 정배열(상승추세)</div>
+<div class="detail up">🔰 쉽게 말하면 → 매수 쪽 신호가 우세, 눌림목 노려볼 자리. (오르는 힘이 점점 세지는 중, 단기·중기·장기선이 위로 잘 정렬됨(건강한 상승))</div>
+<div class="detail up">💬 CIO: 정배열 상승추세 진행 중, 거래량 3.3배 급증으로 매수세 유입 포착 → 매수 신호 우세하나 확인 후 대응 권고</div>
+<div class="detail">📍 52주 위치 66% (0=바닥 100=천장)</div>
+<div class="line">📐 업종 상대강도: [금융] 4종목 중 1위 (+1.0%) — 오늘 업종 대장 흐름 · 거래대금 4종목 중 1위</div>
+<div class="detail">🔰 쉽게 말하면 → 같은 업종(반도체 등) 안에서 오늘 이 종목이 제일 많이 올랐다는 뜻이에요. 업종 안에서 돈이 제일 많이 몰리는 종목일 가능성이 높아요.</div>
+<div class="detail up concl">📌 결론: 🟢 매수 우위(눌림목 검토)</div>
+<div class="detail up">✅ [KB금융(105560)] 최근 14일 리스크 공시 없음</div>
+<div class="line">🏭 주력: KB국민은행 등 종합금융지주</div>
+<div class="line">영향력: 국내 리딩금융지주 — 금리·배당정책(주주환원)에 주가 민감</div>
+<div class="line">🏢 KB금융 재무 (DART 기준)</div>
+<div class="line warn">⚠️ 재무수집 실패: 최근 5개년 사업보고서에서 매출 계정 못 찾음 (마지막 오류: 조회된 데이타가 없습니다.)</div>
+<div class="line warn">매출 성장 ⚠️확인불가</div>
+<div class="line warn">영업이익 ⚠️확인불가</div>
+<div class="line warn">ROE ⚠️확인불가</div>
+<div class="line warn">부채 ⚠️확인불가</div>
+<div class="line">PER 🟡보통 · 11.2배 (컷:≤10배)</div>
+<div class="line">PBR 🟡보통 · 1.05배 (컷:≤1배)</div>
+<div class="line neutral">→ 종합: 🟡보통 (중립)</div>
+<div class="line warn">⚠️ 확인불가 6개 — 신뢰도 낮음</div>
+<div class="gap"></div>
+<div class="stock">● 하이브 (엔터)</div>
+<div class="line">179,400원 · 강도 3/5</div>
+<div class="detail up">📊 🟢 매수 우위(눌림목 검토) | MACD 상승모멘텀 강화 · 이평 골든크로스 초입</div>
+<div class="detail up">🔰 쉽게 말하면 → 매수 쪽 신호가 우세, 눌림목 노려볼 자리. (오르는 힘이 점점 세지는 중, 단기선이 중기선을 뚫고 올라오는 초입)</div>
+<div class="detail up">💬 CIO: 추세 전환 초입, 52주 10%로 저점권, 낙폭과대 반등 여지 → 매수 신호 우세하나 확인 후 대응 권고</div>
+<div class="detail">📍 52주 위치 10% (0=바닥 100=천장)</div>
+<div class="line">📐 업종 상대강도: [엔터] 3종목 중 2위 (-0.3%, 1위는 와이지엔터 +1.7%) · 거래대금 3종목 중 1위</div>
+<div class="detail">🔰 쉽게 말하면 → 같은 업종 종목들끼리 오늘 등락률로 줄을 세운 순위예요. 1등이 아니어도 괜찮아요 — 다만 업종 1등 종목과 왜 차이 나는지 궁금하면 같이 비교해서 보세요.</div>
+<div class="detail up concl">📌 결론: 🟢 매수 우위(눌림목 검토)</div>
+<div class="detail up">✅ [하이브(352820)] 최근 14일 리스크 공시 없음</div>
+<div class="line">🏭 주력: 음반기획·아티스트 매니지먼트(BTS 등)</div>
+<div class="line">영향력: 글로벌 K팝 1위 기획사 — 소속 아티스트 컴백·활동 일정에 주가 연동</div>
+<div class="line">🏢 하이브 재무 (DART 기준)</div>
+<div class="line up">매출 성장 🟢좋음 · +10.3% (컷:3년CAGR≥10%)</div>
+<div class="line">영업이익 🟡보통 · 1.9% (컷:영업이익률≥10%)</div>
+<div class="line down">ROE 🔴나쁨 · -7.2% (컷:≥15%)</div>
+<div class="line up">부채 🟢좋음 · 54% (컷:부채비율≤100%)</div>
+<div class="line">PBR 🟡보통 · 2.34배 (컷:≤1배)</div>
+<div class="line neutral">→ 종합: 🟡보통 (중립)</div>
+<div class="line">강점: 매출 성장, 현금흐름, 부채 / 약점: 순이익, ROE</div>
+<div class="gap"></div>
+<div class="stock">● 롯데케미칼 (화학)</div>
+<div class="line">59,100원 · 강도 3/5</div>
+<div class="detail up">📊 🟢 매수 우위(눌림목 검토) | MACD 상승모멘텀 강화 · 이평 골든크로스 초입</div>
+<div class="detail up">🔰 쉽게 말하면 → 매수 쪽 신호가 우세, 눌림목 노려볼 자리. (오르는 힘이 점점 세지는 중, 단기선이 중기선을 뚫고 올라오는 초입)</div>
+<div class="detail up">💬 CIO: 추세 전환 초입, 52주 10%로 저점권, 낙폭과대 반등 여지 → 매수 신호 우세하나 확인 후 대응 권고</div>
+<div class="detail">📍 52주 위치 10% (0=바닥 100=천장)</div>
+<div class="line">📐 업종 상대강도: [화학] 2종목 중 1위 (-0.7%) — 오늘 업종 대장 흐름 · 거래대금 2종목 중 2위</div>
+<div class="detail">🔰 쉽게 말하면 → 같은 업종(반도체 등) 안에서 오늘 이 종목이 제일 많이 올랐다는 뜻이에요. 업종 안에서 돈이 제일 많이 몰리는 종목일 가능성이 높아요.</div>
+<div class="detail up concl">📌 결론: 🟢 매수 우위(눌림목 검토)</div>
+<div class="detail up">✅ [롯데케미칼(011170)] 최근 14일 리스크 공시 없음</div>
+<div class="line">🏭 주력: 석유화학제품(에틸렌 등 기초소재)</div>
+<div class="line">영향력: 유가·중국 공급과잉에 실적이 크게 좌우되는 경기민감 화학주</div>
+<div class="line">🏢 롯데케미칼 재무 (DART 기준)</div>
+<div class="line down">매출 성장 🔴나쁨 · -3.7% (컷:3년CAGR≥10%)</div>
+<div class="line warn">영업이익 ⚠️확인불가</div>
+<div class="line warn">ROE ⚠️확인불가</div>
+<div class="line up">부채 🟢좋음 · 77% (컷:부채비율≤100%)</div>
+<div class="line up">PBR 🟢좋음 · 0.20배 (컷:≤1배)</div>
+<div class="line up">→ 종합: 🟢좋음 (매수 고려)</div>
+<div class="line warn">강점: 현금흐름, 부채, PBR / 약점: 매출 성장 / ⚠️ 확인불가 3개 — 신뢰도 낮음</div>
+<div class="gap"></div>
+<div class="stock">● 대주전자재료 (2차전지)</div>
+<div class="line">92,200원 · 강도 3/5</div>
+<div class="detail up">📊 🟢 매수 우위(눌림목 검토) | MACD 상승모멘텀 강화 · 이평 골든크로스 초입</div>
+<div class="detail up">🔰 쉽게 말하면 → 매수 쪽 신호가 우세, 눌림목 노려볼 자리. (오르는 힘이 점점 세지는 중, 단기선이 중기선을 뚫고 올라오는 초입)</div>
+<div class="detail up">💬 CIO: 추세 전환 초입, 52주 27%로 중하단, 눌림목 구간 → 매수 신호 우세하나 확인 후 대응 권고</div>
+<div class="detail">📍 52주 위치 27% (0=바닥 100=천장)</div>
+<div class="line">📐 업종 상대강도: [2차전지] 10종목 중 10위 (+0.4%, 1위는 엘앤에프 +8.8%) · 거래대금 10종목 중 10위</div>
+<div class="detail">🔰 쉽게 말하면 → 같은 업종 종목들끼리 오늘 등락률로 줄을 세운 순위예요. 1등이 아니어도 괜찮아요 — 다만 업종 1등 종목과 왜 차이 나는지 궁금하면 같이 비교해서 보세요.</div>
+<div class="detail up concl">📌 결론: 🟢 매수 우위(눌림목 검토)</div>
+<div class="detail up">✅ [대주전자재료(078600)] 최근 14일 리스크 공시 없음</div>
+<div class="line">🏭 주력: 2차전지 실리콘 음극재·전자재료</div>
+<div class="line">영향력: 차세대 실리콘 음극재 상용화 기대주</div>
+<div class="line">🏢 대주전자재료 재무 (DART 기준)</div>
+<div class="line up">매출 성장 🟢좋음 · +17.3% (컷:3년CAGR≥10%)</div>
+<div class="line">영업이익 🟡보통 · 8.1% (컷:영업이익률≥10%)</div>
+<div class="line">ROE 🟡보통 · 8.1% (컷:≥15%)</div>
+<div class="line">부채 🟡보통 · 156% (컷:부채비율≤100%)</div>
+<div class="line down">PER 🔴나쁨 · 67.0배 (컷:≤10배)</div>
+<div class="line down">PBR 🔴나쁨 · 5.50배 (컷:≤1배)</div>
+<div class="line neutral">→ 종합: 🟡보통 (중립)</div>
+<div class="line">강점: 매출 성장, 순이익, 현금흐름 / 약점: PER, PBR</div>
+<div class="gap"></div>
+<h2 class="">📖 쉬운 설명</h2>
+<div class="detail up">· 🟢살만함=지표들이 매수 유리 / 🟡관망=애매 / 🔴조심=매도신호</div>
+<div class="detail up">· 상승세=오름세 / 하락세=내림세 / 반등시도=바닥에서 올라오려는 중</div>
+<div class="detail up">· 과열도: 많이빠짐=싸진 상태(반등기대) / 많이오름=비싸진 상태(과열)</div>
+<div class="gap"></div>
+<div class="line">※ 진입/손절은 본인 원칙에 따름</div>
+<div class="line">(종목당 10%씩 분할매수·최대30~40% / 분할매도 50%씩)</div>
+<div class="line">(손절 단타-3%·스윙-6%=최후방어선, 근거선 이탈이 먼저)</div>
+<div class="line">(손익비 최소1:2=1차목표, 도달시 50%익절+추적청산 / 현금20~40%)</div>
+<div class="line warn">⚠ 오늘 손절 2회째면 그날은 매매 중단 (조급함 방지 · 09-1)</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🇺🇸 미국 핵심주 실적 일정</h2>
+<div class="line">미국 실적은 다음날 한국 증시에 영향</div>
+<div class="gap"></div>
+<div class="line">향후 30일 내 3개 종목 실적 예정</div>
+<div class="gap"></div>
+<div class="stock">● 브로드컴 (AVGO) 🟠 D-2 임박</div>
+<div class="line">09/03 · 관련: AI인프라·PCB</div>
+<div class="detail concl">💡 AI 네트워크칩 → 이수페타시스 연관</div>
+<div class="gap"></div>
+<div class="stock">● 플래닛랩스 (PL) 🟠 D-3 임박</div>
+<div class="line">09/04 · 관련: 우주·위성</div>
+<div class="detail concl">💡 위성영상 → 위성주 밸류</div>
+<div class="gap"></div>
+<div class="stock">● 마이크론 (MU) D-30</div>
+<div class="line">10/01 · 관련: AI반도체·HBM</div>
+<div class="detail concl">💡 메모리 → SK하이닉스 직접 비교</div>
+<div class="gap"></div>
+<div class="detail">🔰 왜 미국 실적을 보나요?</div>
+<div class="line">엔비디아·마이크론 같은 미국 회사가 밤에</div>
+<div class="line">실적 발표하면, 다음날 아침 한국의 관련</div>
+<div class="line">종목들이 따라 움직여요.</div>
+<div class="line">→ D-1~3 종목은 그날 밤/다음날 주목!</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
