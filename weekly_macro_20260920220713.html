@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📊 주간 매크로 진단</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  /* 2026-08-28 추가: ①~⑩ 소제목("① 미국 증시" 등) */
+  .subhead { font-weight:700; margin:14px 0 4px; padding:4px 2px;
+    color:#a8c7ff; border-bottom:1px solid #2a2e38; }
+  /* 2026-08-31 추가: [테마명] 소제목 — h2(브리핑 대제목)보다 한 단계
+     낮은 밝은 초록 계열로, "지금부터 이 테마 얘기"를 표시 */
+  .theme { font-weight:700; font-size:14.5px; margin:16px 0 6px;
+    padding:5px 10px; color:#7ee787; border-left:3px solid #2ea043;
+    background:#132118; border-radius:4px; display:inline-block; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  /* ── 2026-08-31 추가: 중립/판단보류 (노랑 계열) ──
+     up(빨강)/down(파랑)과 성격이 다른 정보라는 걸 색으로도 구분.
+     경고(.warn)보다는 채도를 낮춰서 "위험 경고"와 헷갈리지 않게 함. */
+  .neutral { color:#e3c04a; font-weight:600; }
+  .stock.neutral { background:#231d10; border-left:3px solid #e3c04a; }
+  .theme.neutral { color:#e3c04a; border-left-color:#e3c04a; background:#231d10; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+  .concl.neutral { border-left-color:#e3c04a; }
+</style>
+</head>
+<body>
+<h1>📊 주간 매크로 진단</h1>
+<div class="ts">생성: 2026-09-20 22:07</div>
+<h2 class="">📊 욱님 주간 매크로 진단 (정량 자동판)</h2>
+<div class="line">🗓️ 2026-09-20 (Sun) 22:07</div>
+<div class="line down">※ 로컬 데이터 자동계산본. 연준 발언·글로벌 자금흐름·업종별 유불리 같은</div>
+<div class="line">정성판단은 채팅에서 "이번 주 시장 어때?"로 물어보면 Claude가 종합해서 답해줌.</div>
+<div class="gap"></div>
+<div class="subhead">① 금리 압력</div>
+<div class="detail">🔰 이게 뭔지: 美 국채 10년물 = 10년간 안전하게 돈 빌려주고 받는 기준 이자율.</div>
+<div class="line down">이게 오르면 '위험한 주식 안 사도 이 정도는 번다'가 돼서, 특히 아직 이익이</div>
+<div class="line down">적은데 미래 기대로 비싸게 거래되는 성장주(반도체·바이오·2차전지 등)부터 부담받음.</div>
+<div class="line down">美 10년물: 4.94% (1개월전 4.72%, +0.22%p). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 금리 급등 — 성장주 부담 커지는 국면. 이번 주 신규 진입은 배당·금융주 쪽에 무게, 성장주는 손절선 타이트하게.</div>
+<div class="gap"></div>
+<div class="subhead down">② 장단기 금리차 · 경기침체 신호</div>
+<div class="detail">🔰 이게 뭔지: 원래는 장기(10년)금리가 단기(2년)금리보다 높은 게 정상.</div>
+<div class="line down">이게 뒤집혀서 마이너스(역전)가 되면, 역사적으로 1~2년 안에 경기침체가</div>
+<div class="line">자주 왔음 — '채권시장이 앞날을 걱정하고 있다'는 신호로 봄.</div>
+<div class="line up">美 10Y-2Y 스프레드: +0.25%p (1개월전 +0.52%p). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 정상화 초입 — 아직 안심 단계는 아님. 평소 원칙(분할매수·손익비1:2) 그대로, 특별히 더 조이거나 풀 필요는 없음.</div>
+<div class="detail">· 美 실업률: 4.10% (1개월전 4.10%, +0.00%p)</div>
+<div class="detail down">🔰 실업률: 낮을수록 경기가 튼튼하다는 뜻. 갑자기 오르기 시작하면 침체 경고음.</div>
+<div class="gap"></div>
+<div class="subhead">③ 경기 사이클 (선행지수)</div>
+<div class="detail">🔰 이게 뭔지: 제조업 신규주문·소비심리 등 '앞날을 먼저 보여주는' 지표들을</div>
+<div class="line">합친 것. 지금 경기가 아니라 몇 달 뒤 경기 방향을 미리 알려주는 나침반.</div>
+<div class="line up">美 경기선행지수: 1.72 (1개월전 1.57, 반등 흐름). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 앞으로 경기 개선 조짐. 경기민감주(반도체·화학·조선 등)에 우호적, 눌림 자리 나오면 적극 검토.</div>
+<div class="detail down">· 국내 업종별 구체적 유불리는 정성판단 필요 → 채팅에서 "지금 경기 사이클 어디쯤이야?" 물어볼 것</div>
+<div class="gap"></div>
+<div class="subhead">④ 원·달러 환율 · 수급</div>
+<div class="detail down">🔰 이게 뭔지: 1달러 사는 데 드는 원화. 오르면(환율 상승) 원화 약세=달러가 비쌈.</div>
+<div class="line">원화 약세면 해외에서 달러로 벌어오는 수출기업은 원화 환산 매출이 늘어나 유리.</div>
+<div class="line down">반대로 외국인 투자자 입장에선 한국 주식 팔고 나갈 때 환차손 부담이 커져서 매도 압력.</div>
+<div class="line">원/달러: 1,385.0원 (1주일 +3.00%). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 원화 약세 진행 — 수출주 유리, 외국인 수급엔 부담. 수출 비중 큰 종목(반도체·자동차 등) 상대적으로 눈여겨볼 만함.</div>
+<div class="detail">· 달러인덱스(광의): 118.21 (1개월전 119.18, -0.97)</div>
+<div class="detail">🔰 달러인덱스: 달러가 여러 나라 통화 대비 전반적으로 강한지 약한지 보는 지표.</div>
+<div class="line down">오르면 신흥국(한국 포함) 통화·증시엔 대체로 부담.</div>
+<div class="gap"></div>
+<div class="subhead">⑤ 글로벌 펀드플로우</div>
+<div class="detail">🔰 이게 뭔지: 전 세계 투자자금이 어느 나라·업종으로 몰리고 빠지는지 보는 것.</div>
+<div class="line">한국 같은 신흥국은 이 흐름에 따라 지수 전체가 출렁이는 경우가 많음.</div>
+<div class="detail">· 전세계 자금이 어느 나라·업종으로 가는지는 로컬 데이터로 확인 불가</div>
+<div class="line">→ 채팅에서 "요즘 돈이 어디로 몰려?"라고 물어보면 확인해줌</div>
+<div class="line warn">(참고) 코스피 외국인 최근 5거래일 순매수 -87,576억원. 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 외국인 자금 순유출 — 국내 수급 부담. ⚠ 이건 '한국(코스피)'만의 수급이다. 전세계 자금이 신흥국/선진국 어디로 가는지는 여전히 확인 불가 — 위 채팅 질문으로 보완할 것.</div>
+<div class="gap"></div>
+<div class="subhead">⑥ 시장 과열 · 공포</div>
+<div class="detail">🔰 PER: 주가를 기업이익으로 나눈 값 — 시장 전체가 비싸게(과열) 거래되는지,</div>
+<div class="line up">싸게(저평가) 거래되는지 보는 잣대.</div>
+<div class="detail">· 코스피 PER 11.49 / PBR 1.72 / 배당수익률 0.92%</div>
+<div class="detail">🔰 VIX: 美 증시가 앞으로 얼마나 출렁일지에 대한 투자자들의 예상치 — 시장 공포 온도계.</div>
+<div class="line up">VIX: 14.8 (1주일 -6.5%). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 15 이하 = 안정 구간(다들 느긋함). '너무 느긋함'도 과열 신호일 수 있음 — 추격매수 자제는 그대로 유지.</div>
+<div class="detail down">🔰 하이일드 스프레드: 신용등급 낮은(부실위험 있는) 회사채가 국채보다 얼마나</div>
+<div class="line">더 높은 이자를 줘야 팔리는지의 차이. 벌어지면 '돈 빌리기 힘든 회사가 늘고</div>
+<div class="line down">있다' = 경기·신용 스트레스가 커지고 있다는 신호.</div>
+<div class="line down">美 하이일드 스프레드: 2.70%p (1개월전 2.70%p). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 신용시장 특이 스트레스 없음.</div>
+<div class="detail">· 신용융자잔고: 로컬 데이터 없음 — 키움 HTS에서 직접 확인 권장</div>
+<div class="gap"></div>
+<div class="subhead">⑦ 물가 · 금리인하 기대</div>
+<div class="detail">🔰 근원CPI: 식료품·에너지처럼 출렁임 심한 항목 뺀 물가지수 — 연준이 금리</div>
+<div class="line">정할 때 제일 중요하게 보는 숫자. 계속 오르면 연준이 금리를 쉽게 못 내림.</div>
+<div class="detail">· 美 근원CPI 지수: 337.76 (1개월전 336.79, +0.98)</div>
+<div class="detail">🔰 美 2년물: 향후 2년 연준 금리 전망이 가장 민감하게 반영되는 채권 금리 —</div>
+<div class="line">내려가면 '시장이 금리인하를 기대하기 시작했다'는 뜻.</div>
+<div class="line down">美 2년물: 4.67% (1개월전 4.19%, +0.48%p). 다만 정량 수치만으론 구체적인 배경 원인까지는 확인이 어렵습니다(채팅으로 물어보면 종합해서 답변해드립니다). 금리인하 기대 후퇴 — 성장주 부담. 성장주 신규 진입은 더 보수적으로, 기존 보유는 손절선 재점검.</div>
+<div class="gap"></div>
+<div class="line">📋 종합 (정량 데이터 참고용)</div>
+<div class="line neutral">이번 주 매크로 신호: 경계 2개 · 우호 2개 · 중립 2개 (금리·스프레드·경기선행·VIX·하이일드·2년물 6개 지표 기준). 경계 신호: 美10년물 급등, 금리인하 기대 후퇴 / 우호 신호: 경기선행지수 반등, 하이일드 스프레드 안정. 신호가 팽팽하거나 중립 — 뚜렷한 국면 아님. 평소 원칙(현금비중 20~40%, 손익비 1:2) 그대로, 종목 자체 신호에 집중.</div>
+<div class="gap"></div>
+<div class="line">이 리포트는 수치 기반 자동계산입니다. 뉴스·발언 등 정성판단까지 반영한</div>
+<div class="line">종합의견은 채팅에서 "이번 주 시장 어때"로 물어보면 CIO 페르소나로 답해줌.</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
