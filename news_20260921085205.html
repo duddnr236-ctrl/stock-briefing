@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📰 아침 뉴스 브리핑</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  /* 2026-08-28 추가: ①~⑩ 소제목("① 미국 증시" 등) */
+  .subhead { font-weight:700; margin:14px 0 4px; padding:4px 2px;
+    color:#a8c7ff; border-bottom:1px solid #2a2e38; }
+  /* 2026-08-31 추가: [테마명] 소제목 — h2(브리핑 대제목)보다 한 단계
+     낮은 밝은 초록 계열로, "지금부터 이 테마 얘기"를 표시 */
+  .theme { font-weight:700; font-size:14.5px; margin:16px 0 6px;
+    padding:5px 10px; color:#7ee787; border-left:3px solid #2ea043;
+    background:#132118; border-radius:4px; display:inline-block; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  /* ── 2026-08-31 추가: 중립/판단보류 (노랑 계열) ──
+     up(빨강)/down(파랑)과 성격이 다른 정보라는 걸 색으로도 구분.
+     경고(.warn)보다는 채도를 낮춰서 "위험 경고"와 헷갈리지 않게 함. */
+  .neutral { color:#e3c04a; font-weight:600; }
+  .stock.neutral { background:#231d10; border-left:3px solid #e3c04a; }
+  .theme.neutral { color:#e3c04a; border-left-color:#e3c04a; background:#231d10; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+  .concl.neutral { border-left-color:#e3c04a; }
+</style>
+</head>
+<body>
+<h1>📰 아침 뉴스 브리핑</h1>
+<div class="ts">생성: 2026-09-21 08:52</div>
+<h2 class="">📰 욱님 아침 뉴스 브리핑</h2>
+<div class="line">🕖 2026-09-21 (Mon) 08:51</div>
+<div class="gap"></div>
+<div class="detail concl">📌 오늘의 결론</div>
+<div class="line up">오늘 시장: 호재 우세 (5:1)</div>
+<div class="gap"></div>
+<h2 class="">💬 CIO 오늘의 시장 판단</h2>
+<div class="line down">오늘 분위기: 위험선호(리스크온) 우위</div>
+<div class="line">(호재신호 6 vs 악재신호 1)</div>
+<div class="line up">→ 긍정적 재료 우세. 주도 섹터 중심 대응 유효한 환경.</div>
+<div class="detail concl">📌 오늘의 화두: 반도체</div>
+<div class="gap"></div>
+<div class="detail">🔰 쉽게: 오늘 뉴스는 좋은 소식이 많아요. 시장 분위기가 밝은 편이라, 강한 섹터를 눈여겨볼 만해요.</div>
+<div class="gap"></div>
+<h2 class="">🎯 오늘 이렇게 대응</h2>
+<div class="detail up">· 호재 우세 → 리스크온</div>
+<div class="detail">· 현금 20~30% (공격 여지)</div>
+<div class="detail">· 검색기 A(20일선 눌림) 위주</div>
+<div class="gap"></div>
+<div class="detail concl">📌 원칙: 거래대금·3분봉 확인 후 진입 / 손익비 1:2 미달 패스 / 급등추격 금지</div>
+<div class="gap"></div>
+<div class="line">📋 오늘 한눈에 (핵심만)</div>
+<div class="line neutral">[이슈] 증시 전망: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line up">[이슈] 코스피: 지수 방향은 개별종목 배경. 지수 좋을 때 종목도 잘 감. → 🟢호재 관심</div>
+<div class="line up">[이슈] 미국 증시 뉴욕: 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감. → 🟢호재 관심</div>
+<div class="line neutral">[이슈] 반도체 HBM: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line up">[이슈] 환율 원달러: 실적 발표는 선반영 많음. 발표 후 주가 반응을 봐야. → 🟢호재 관심</div>
+<div class="line neutral">[이슈] 금리 연준: 지수 방향은 개별종목 배경. 지수 좋을 때 종목도 잘 감. → ⚪중립 관망</div>
+<div class="line neutral">[이슈] 外人 기관 수급: 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감. → ⚪중립 관망</div>
+<div class="line down">[이슈] 실적 발표: 부정 재료. 해당 섹터 약세 가능, 신규 진입 신중히. → 🔴악재 주의</div>
+<div class="line neutral">[테마] AI컴퓨팅: 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감. → ⚪중립 관망</div>
+<div class="line neutral">[테마] 로봇: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line neutral">[테마] 전력에너지: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line neutral">[테마] 방산: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line neutral">[테마] 조선: 한국 증시 주도 섹터. 반도체 강하면 지수도 따라감. → ⚪중립 관망</div>
+<div class="line neutral">[테마] 바이오소비: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line neutral">[테마] 우주위성: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line neutral">[테마] AI소프트웨어: 제목에 호재·악재 방향성 키워드는 없음 — 경험상 이런 '무신호' 제목은 시장 임팩트가 작은 단순 공지... → ⚪중립 관망</div>
+<div class="line">(자세한 근거·전문가 해석은 아래 상세 참고)</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🌍 오늘의 시장 흐름 (해외 → 국내)</h2>
+<div class="gap"></div>
+<div class="subhead">① 미국 증시</div>
+<div class="line up">[AI MY 증시전망] 코스피, 반도체 강세에 상승 시도…7000선 재진입 '주...</div>
+<div class="line up">반도체·AI 관련 소식으로, 호재로 해석됩니다. 🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.  💪★★☆☆☆</div>
+<div class="detail">🔗 기사보기: https://www.newspim.com/news/view/20260921000058</div>
+<div class="gap"></div>
+<div class="subhead">② 핵심 해외 이슈</div>
+<div class="line">[모닝 리포트] "코스피 7000선 재도전…추석 전 수급 공백 변수"</div>
+<div class="line neutral">호재·악재가 뚜렷하지 않은 중립적인 소식입니다. 🔰 쉽게 말하면 → 지수(코스피)는 시장 전체의 체온계예요. 지수가 오르는 날은 대부분 종목도 같이 오를 확률이 높으니, 오늘 지수 분위기부터 확인하고 개별 종목을 보세요.  💪★☆☆☆☆</div>
+<div class="detail">🔗 기사보기: https://www.newspim.com/news/view/20260921000035</div>
+<div class="line up">"LG에너지솔루션, 실적 개선세 지속"</div>
+<div class="line up">호재로 해석됩니다. 🔰 쉽게 말하면 → 실적이 잘 나와도 이미 기대감이 주가에 반영돼 있으면 '재료 소멸'로 오히려 빠지기도 해요. 실적 발표 자체보다 발표 '이후' 주가가 실제로 어떻게 반응하는지를 보고 판단하세요.  💪★★☆☆☆</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/014/0005578671?sid=101</div>
+<div class="gap"></div>
+<div class="subhead">③ 주요 지표</div>
+<div class="detail">· 코스피: 6,894.2 ▲2.66%</div>
+<div class="detail">🔰 한국 대표기업 전체 주가를 합친 지수 (시장 전체 체온계)</div>
+<div class="line up">→ 시장 전체 강세: 개별종목 진입 시 순풍, 단 추격매수 금지 원칙은 그대로</div>
+<div class="detail">· 코스닥: 827.1 ▲0.60%</div>
+<div class="detail">🔰 중소형·성장주 중심 지수. 코스피보다 변동 크고 개인 비중 높음</div>
+<div class="line">→ 보합권: 시장 방향성 뚜렷하지 않음, 종목 자체 신호에 더 집중</div>
+<div class="detail">· 원/달러: 1,385.7원 ▲0.45%</div>
+<div class="detail">🔰 1달러 사는 데 드는 원화. 오르면 원화 약세, 내리면 원화 강세</div>
+<div class="line">→ 원화 약세 진행 중: 수출주(반도체·자동차 등)엔 유리, 외국인은 환차손 부담에 매도할 수 있음</div>
+<div class="detail">· 미국10년물: 5.00 ▲1.03%</div>
+<div class="detail">🔰 美 국채 10년 금리. 안전하게 돈 빌려주고 받는 기준 이자율</div>
+<div class="line down">→ 美 금리 급등: 성장주(아직 이익 적은 반도체·바이오 등) 밸류에이션 부담 커짐 — 신규 진입 신중</div>
+<div class="detail">· 공포지수(VIX): 14.81 ▼4.08%</div>
+<div class="detail">🔰 美 증시 '앞으로 얼마나 출렁일지' 예상치. 시장 불안 온도계</div>
+<div class="line">→ 15 이하 = 안정 구간: 시장은 느긋하지만 '너무 느긋함'도 과열 신호일 수 있음</div>
+<div class="detail">· 다우선물: 52,199.0 ▲0.85%</div>
+<div class="detail">🔰 다우존스30 선물지수. 미국 대형 우량주 체감온도, 밤사이 심리를 미리 보여줌</div>
+<div class="line up">→ 미국 선물 강세: 오늘 국내 증시·종가베팅 종목 갭상승 가능성 — 그래도 시가 추격매수는 금지, 흐름 확인 후 진입</div>
+<div class="detail">· 나스닥선물: 30,033.2 ▲1.42%</div>
+<div class="detail">🔰 나스닥100 선물지수. 반도체·빅테크 비중 커서 한국 반도체주 방향과 연동성 높음</div>
+<div class="line up">→ 미국 선물 강세: 오늘 국내 증시·종가베팅 종목 갭상승 가능성 — 그래도 시가 추격매수는 금지, 흐름 확인 후 진입</div>
+<div class="gap"></div>
+<div class="subhead">④ 국내 영향</div>
+<div class="line up">오늘 뉴스 종합 분위기: 호재 우세 (5:1)</div>
+<div class="detail">🔰 쉽게 말하면 → 오늘 나온 뉴스 중에 좋은 소식·나쁜 소식이 몇 개씩인지 세어본 거예요. 좋은 소식이 많으면 오늘 시장이 위로 올라갈 힘이 세다는 뜻이에요.</div>
+<div class="gap"></div>
+<div class="subhead">⑤ 수혜·피해 섹터</div>
+<div class="line up">수혜(호재 우세): 없음</div>
+<div class="line down">피해(악재 우세): 없음</div>
+<div class="detail up">🔰 쉽게 말하면 → 오늘 뉴스에서 좋은 얘기가 많이 나온 업종이 '수혜', 나쁜 얘기가 많이 나온 업종이 '피해'예요. 수혜 업종부터 먼저 살펴보면 좋아요 (다만 자리·거래대금·돌파확인·손익비는 그대로 다 확인해야 해요).</div>
+<div class="gap"></div>
+<div class="subhead">⑥ 국내 관련 종목 (워치리스트 핵심종목 기준)</div>
+<div class="detail">· 워치리스트에서 매칭되는 핵심종목 없음(우주위성 등 미보유 테마 포함)</div>
+<div class="gap"></div>
+<div class="subhead">⑦ 오늘의 시장 변수</div>
+<div class="detail">🔰 쉽게 말하면 → 오늘·이번 주에 실적 발표가 예정된 종목이에요. 실적 발표 전후엔 주가가 크게 튈 수 있어서 미리 알아두면 좋아요.</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🇺🇸 미국 핵심주 실적 일정</h2>
+<div class="line">미국 실적은 다음날 한국 증시에 영향</div>
+<div class="gap"></div>
+<div class="line">향후 30일 내 10개 종목 실적 예정</div>
+<div class="gap"></div>
+<div class="stock">● 마이크론 (MU) D-10</div>
+<div class="line">10/01 · 관련: AI반도체·HBM</div>
+<div class="detail concl">💡 메모리 → SK하이닉스 직접 비교</div>
+<div class="gap"></div>
+<div class="stock">● JP모건 (JPM) D-22</div>
+<div class="line">10/13 · 관련: 증권·금융</div>
+<div class="detail concl">💡 글로벌 IB → 금융주 업황</div>
+<div class="gap"></div>
+<div class="stock">● 골드만삭스 (GS) D-22</div>
+<div class="line">10/13 · 관련: 증권·금융</div>
+<div class="detail concl">💡 IB → 증권주 심리</div>
+<div class="gap"></div>
+<div class="stock">● TSMC (TSM) D-24</div>
+<div class="line">10/15 · 관련: AI반도체·HBM</div>
+<div class="detail concl">💡 파운드리 1위 → 반도체 업황 바로미터</div>
+<div class="gap"></div>
+<div class="stock">● RTX (RTX) D-29</div>
+<div class="line">10/20 · 관련: 방산</div>
+<div class="detail concl">💡 미사일·방산 → 방산주 업황</div>
+<div class="gap"></div>
+<div class="stock">● 노스롭 (NOC) D-29</div>
+<div class="line">10/20 · 관련: 방산</div>
+<div class="detail concl">💡 방산 → 글로벌 국방예산 신호</div>
+<div class="gap"></div>
+<div class="stock">● 록히드마틴 (LMT) D-29</div>
+<div class="line">10/20 · 관련: 방산</div>
+<div class="detail concl">💡 방산 대장 → 한화에어로·LIG 심리</div>
+<div class="gap"></div>
+<div class="stock">● 넷플릭스 (NFLX) D-30</div>
+<div class="line">10/21 · 관련: 엔터·미디어</div>
+<div class="detail concl">💡 콘텐츠 → 엔터·미디어 업황</div>
+<div class="gap"></div>
+<div class="stock">● 버티브 (VRT) D-30</div>
+<div class="line">10/21 · 관련: 전력기기·전선</div>
+<div class="detail concl">💡 데이터센터 전력 → 전력주 수요</div>
+<div class="gap"></div>
+<div class="stock">● 인튜이티브 (ISRG) D-30</div>
+<div class="line">10/21 · 관련: 로봇·피지컬AI</div>
+<div class="detail concl">💡 수술로봇 대표 → 로봇 밸류 기준</div>
+<div class="gap"></div>
+<div class="detail">🔰 왜 미국 실적을 보나요?</div>
+<div class="line">엔비디아·마이크론 같은 미국 회사가 밤에</div>
+<div class="line">실적 발표하면, 다음날 아침 한국의 관련</div>
+<div class="line">종목들이 따라 움직여요.</div>
+<div class="line">→ D-1~3 종목은 그날 밤/다음날 주목!</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">📰 주식 관련 이슈 (상세)</h2>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [시장전반] ★☆☆☆☆ [판단보류]</div>
+<div class="detail">· [오늘의 브릿지경제 1면] 불황에서 살아남은 건설사… 무엇이 달랐나</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="detail">🔗 기사보기: https://www.viva100.com/article/20260920500677</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [시장전반] ★★☆☆☆ [판단보류]</h2>
+<div class="detail up">· 대신증권 "코스피, 7,100 돌파 여부가 추가 상승 분기점"</div>
+<div class="detail">🔰 쉽게 말하면 → 지수(코스피)는 시장 전체의 체온계예요. 지수가 오르는 날은 대부분 종목도 같이 오를 확률이 높으니, 오늘 지수 분위기부터 확인하고 개별 종목을 보세요.</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/001/0016325122?sid=101</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [반도체·AI] ★★☆☆☆ [판단보류]</h2>
+<div class="detail up">· [AI MY 증시전망] 코스피, 반도체 강세에 상승 시도…7000선 재진입 '주...</div>
+<div class="detail">🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.</div>
+<div class="detail">🔗 기사보기: https://www.newspim.com/news/view/20260921000058</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [반도체·AI] ★☆☆☆☆ [판단보류]</div>
+<div class="detail">· '빅쇼트' 아이스만, SK하이닉스 주목 "AI 시대엔 칼 쓰는 기업보다 칼 파...</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="detail">🔗 기사보기: https://www.theguru.co.kr/news/article.html?no=107331</div>
+<div class="gap"></div>
+<h2 class="up">🟢호재 [시장전반] ★★☆☆☆ [판단보류]</h2>
+<div class="detail up">· "LG에너지솔루션, 실적 개선세 지속"</div>
+<div class="detail">🔰 쉽게 말하면 → 실적이 잘 나와도 이미 기대감이 주가에 반영돼 있으면 '재료 소멸'로 오히려 빠지기도 해요. 실적 발표 자체보다 발표 '이후' 주가가 실제로 어떻게 반응하는지를 보고 판단하세요.</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/014/0005578671?sid=101</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [시장전반] ★☆☆☆☆ [판단보류]</div>
+<div class="detail">· [모닝 리포트] "코스피 7000선 재도전…추석 전 수급 공백 변수"</div>
+<div class="detail">🔰 쉽게 말하면 → 지수(코스피)는 시장 전체의 체온계예요. 지수가 오르는 날은 대부분 종목도 같이 오를 확률이 높으니, 오늘 지수 분위기부터 확인하고 개별 종목을 보세요.</div>
+<div class="detail">🔗 기사보기: https://www.newspim.com/news/view/20260921000035</div>
+<div class="gap"></div>
+<div class="line neutral">⚪중립 [반도체] ★☆☆☆☆ [판단보류]</div>
+<div class="detail">· [투데이 Pick] 外人 ‘금융·에너지’ 담고 기관 ‘한미반도체’ 픽…개...</div>
+<div class="detail">🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.</div>
+<div class="detail">🔗 기사보기: https://www.news2day.co.kr/article/20260920500003</div>
+<div class="gap"></div>
+<h2 class="down">🔴악재 [시장전반] ★★☆☆☆ [판단보류]</h2>
+<div class="detail down">· 적자폭 줄였지만 연체율 비상…수협, 3000억 수혈해 부실 턴다</div>
+<div class="detail down">🔰 쉽게 말하면 → 나쁜 소식이라 해당 업종이 약세를 보일 수 있어요. 오늘은 이 섹터에 새로 들어가는 건 신중하게 접근하세요.</div>
+<div class="detail">🔗 기사보기: https://www.viva100.com/article/20260917500850</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<h2 class="">🎯 테마별 동향 (상세)</h2>
+<div class="gap"></div>
+<div class="theme">[AI컴퓨팅]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 삼성자산운용, 미국반도체에 SK하이닉스 ADR 편입</div>
+<div class="detail">🔗 기사보기: https://www.ziksir.com/news/articleView.html?idxno=147018</div>
+<div class="detail">🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.</div>
+<div class="gap"></div>
+<div class="theme">[로봇]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 첨단산업 투자 발목 잡는 도로·용수 등 기반시설 … 한경협, 첨단전략...</div>
+<div class="detail">🔗 기사보기: http://www.worktoday.co.kr/news/articleView.html?idxno=89533</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] CJ대한통운, 물류특화 피지컬AI 개발 박차…리얼월드와 MOU</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/001/0016325121?sid=101</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="gap"></div>
+<div class="theme">[전력에너지]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] “SMR 청정 열에너지도 공급 가능…기장 밸류체인 구축을”</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/658/0000156172?sid=101</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] “기장 SMR, 생산 3조1800억·고용 1만6000명 효과”</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/658/0000156171?sid=101</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="gap"></div>
+<div class="theme">[방산]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 카타르·쿠웨이트, 한국산 천궁-II 방공체계 도입 초읽기</div>
+<div class="detail">🔗 기사보기: https://www.theguru.co.kr/news/article.html?no=107326</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] "실적은 뛰는데 주가는 소외…중소형주 재평가 기대" - 그로쓰리서치</div>
+<div class="detail">🔗 기사보기: https://www.newspim.com/news/view/20260921000094</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="gap"></div>
+<div class="theme">[조선]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 메모리 쏠림 이후를 본다, "소외됐던 중소형주 재평가 가능성"</div>
+<div class="detail">🔗 기사보기: https://platum.kr/archives/294906</div>
+<div class="detail">🔰 쉽게 말하면 → 삼성전자·SK하이닉스 같은 반도체주는 코스피에서 차지하는 비중이 커서, 이 업종이 강하면 지수 전체도 같이 오르는 경우가 많아요. 반도체 뉴스는 오늘 지수 방향을 가늠하는 힌트로 보면 돼요.</div>
+<div class="gap"></div>
+<div class="theme">[바이오소비]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 화장품 만들고 우주 나가고… 제약 3·4세 ‘영토확장’ 분주</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/014/0005578543?sid=103</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] "피부에 양보 말고 그냥 먹으세요"...이너뷰티에 꽂힌 제약사</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/119/0003134597?sid=101</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="gap"></div>
+<div class="theme">[우주위성]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 중국 AI 정책, 6개월 후에 현실화 된다</div>
+<div class="detail">🔗 기사보기: https://n.news.naver.com/mnews/article/047/0002529705?sid=101</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] AI·우주항공·반도체 날았다... 美 메디컬AI 19.6% 1위 [주간 ETF]</div>
+<div class="detail">🔗 기사보기: https://www.m-i.kr/news/articleView.html?idxno=1416437</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="gap"></div>
+<div class="theme">[AI소프트웨어]</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 뉴로퓨전, '포캐스트밴치' 선행 리더보드 1위 ··· 금융 AI 예측 성능 ...</div>
+<div class="detail">🔗 기사보기: https://www.datanet.co.kr/news/articleView.html?idxno=214593</div>
+<div class="line neutral">⚪중립 ★☆☆☆☆ [판단보류] 웅진, 모빌리티 플랫폼에 자체 AI 기능 적용</div>
+<div class="detail">🔗 기사보기: https://www.pinpointnews.co.kr/news/articleView.html?idxno=488931</div>
+<div class="detail">🔰 쉽게 말하면 → '급등'·'급락' 같은 강한 신호 단어가 없는 제목이에요. 경험상 이런 제목은 대부분 주가에 큰 영향이 없는 안내성 뉴스예요. 다만 100% 확신은 아니니, 이 종목을 매매할 생각이면 아래 링크로 기사 원문을 먼저 열어서 확인하세요.</div>
+<div class="gap"></div>
+<h2 class="">📖 쉬운 설명</h2>
+<div class="detail">· ★★★☆☆(재료강도) = 별이 많을수록 이 뉴스에 힘이 실렸다는 뜻(제목에 잡힌 호재/악재 단어 개수 기반 참고치 — 정밀 계산 아님)</div>
+<div class="detail neutral">· [장기 재료] = 몇 주~몇 달 갈 수 있는 재료 / [단기 재료] = 며칠 안에 식을 수 있는 재료 / [판단보류] = 이 도구가 확신 못함, 직접 확인 필요</div>
+<div class="detail up">· 🟢🟢강한호재 처럼 이모지가 겹치면 홑개(🟢호재)보다 신호가 더 강하다는 뜻</div>
+<div class="gap"></div>
+<div class="line">※ 뉴스는 참고용. 최종 판단은 본인 원칙대로. (AI 추정 표시된 원인·전망은 제목만 보고 추론한 것이라 틀릴 수 있음 — 참고만 하고 과신 금지)</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
