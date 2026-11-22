@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚠️ 장애알림 [morning]</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, 'Malgun Gothic', sans-serif;
+    background:#0f1115; color:#e8eaed; line-height:1.6;
+    padding:16px; max-width:600px; margin:0 auto;
+    font-size:15px;
+  }
+  h1 { font-size:20px; margin-bottom:4px; color:#fff; }
+  .ts { color:#8a8f98; font-size:13px; margin-bottom:16px; }
+  h2 {
+    font-size:16px; margin:20px 0 8px; padding:8px 12px;
+    background:linear-gradient(90deg,#1a3a5c,#0f1115);
+    border-left:3px solid #4a9eff; border-radius:6px; color:#fff;
+  }
+  .stock {
+    font-weight:600; margin:12px 0 4px; padding:6px 10px;
+    background:#1a1d24; border-radius:6px; color:#7ec8ff;
+  }
+  .detail { padding:2px 14px; color:#c0c4cc; font-size:14px; }
+  /* 2026-08-28 추가: ①~⑩ 소제목("① 미국 증시" 등) */
+  .subhead { font-weight:700; margin:14px 0 4px; padding:4px 2px;
+    color:#a8c7ff; border-bottom:1px solid #2a2e38; }
+  /* 2026-08-31 추가: [테마명] 소제목 — h2(브리핑 대제목)보다 한 단계
+     낮은 밝은 초록 계열로, "지금부터 이 테마 얘기"를 표시 */
+  .theme { font-weight:700; font-size:14.5px; margin:16px 0 6px;
+    padding:5px 10px; color:#7ee787; border-left:3px solid #2ea043;
+    background:#132118; border-radius:4px; display:inline-block; }
+  .rank { padding:4px 10px; color:#e8eaed; }
+  .line { padding:2px 4px; color:#d0d4dc; }
+  .gap { height:6px; }
+  .footer { margin-top:24px; padding-top:12px; border-top:1px solid #2a2e38;
+    color:#6a6f78; font-size:12px; text-align:center; }
+  /* ── 2026-08-24 추가: 색상 강조 (빨강=상승/호재, 파랑=하락/악재) ── */
+  .up { color:#ff6b6b; font-weight:600; }
+  .down { color:#5b9dff; font-weight:600; }
+  .stock.up { background:#2a1414; border-left:3px solid #ff6b6b; }
+  .stock.down { background:#12203a; border-left:3px solid #5b9dff; }
+  /* ── 2026-08-31 추가: 중립/판단보류 (노랑 계열) ──
+     up(빨강)/down(파랑)과 성격이 다른 정보라는 걸 색으로도 구분.
+     경고(.warn)보다는 채도를 낮춰서 "위험 경고"와 헷갈리지 않게 함. */
+  .neutral { color:#e3c04a; font-weight:600; }
+  .stock.neutral { background:#231d10; border-left:3px solid #e3c04a; }
+  .theme.neutral { color:#e3c04a; border-left-color:#e3c04a; background:#231d10; }
+  .warn { background:#3a2e10; color:#ffcc66; border-radius:4px;
+    padding:4px 10px; }
+  .concl { font-weight:700; background:#1c1f26; border-radius:6px;
+    padding:6px 12px; margin:4px 0; border-left:3px solid #8a8f98; }
+  .concl.up { border-left-color:#ff6b6b; }
+  .concl.down { border-left-color:#5b9dff; }
+  .concl.neutral { border-left-color:#e3c04a; }
+</style>
+</head>
+<body>
+<h1>⚠️ 장애알림 [morning]</h1>
+<div class="ts">생성: 2026-11-23 08:29</div>
+<div class="line warn">⚠️ [morning] 브리핑 생성 실패</div>
+<div class="line">시각: 2026-11-23 08:29</div>
+<div class="line">원인: 전 종목 데이터 수집 실패 (KRX 접속/네트워크 확인)</div>
+<div class="line">→ PC/네트워크/토큰 상태를 확인하세요.</div>
+<div class="footer">참고용 자료입니다. 투자 판단과 책임은 본인에게 있습니다.</div>
+</body>
+</html>
